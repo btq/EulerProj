@@ -2,8 +2,8 @@
 #include <vector>
 using namespace std;
 
-void fibonacci(vector<int> *, int);
-void remove_odds(vector<int> *);
+void Fibonacci(vector<int> *, int);
+void RemoveOdds(vector<int> *);
 
 int main(int argc, char** argv)
 {
@@ -14,9 +14,9 @@ int main(int argc, char** argv)
 	cout << "Please enter a limit for the fibonacci sequence" << endl;
 	cin >> lim;
 	cout << "On to fibonacci, vector size is " << fib.size() << endl;
-	fibonacci(&fib,lim);
+	Fibonacci(&fib,lim);
 	cout << "Back from fibonacci, vector size is " << fib.size() << endl;
-	remove_odds(&fib);
+	RemoveOdds(&fib);
 	int sum=0, n=0;
 	for (n=0; n<fib.size(); n++)
 		sum=sum + fib[n];
@@ -24,7 +24,7 @@ int main(int argc, char** argv)
 	return 0;
 }
 
-void fibonacci(vector<int> *v, int limit)
+void Fibonacci(vector<int> *v, int limit)
 {
 	if ( v->back() >= limit)
 	{
@@ -36,11 +36,11 @@ void fibonacci(vector<int> *v, int limit)
 	{
 		v->push_back(1);
 		v->at(v->size()-1) = v->at(v->size() - 3) + v->at(((int)v->size()) - 2);
-		fibonacci(v,limit);
+		Fibonacci(v,limit);
 	}
 }
 
-void remove_odds(vector<int> *v)
+void RemoveOdds(vector<int> *v)
 {
 	int n=0;
 	while (n < v->size())
