@@ -50,7 +50,7 @@ bool IsPrime(double n)
 	
 	// check for factors up to sqrt(n)
 	int k=3;
-	while (k < floor(sqrt(n)))
+	while (k <= floor(sqrt(n)))
     {
 	if (fmod(n,k) == 0) 
 		return false;

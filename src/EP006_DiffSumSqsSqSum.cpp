@@ -22,5 +22,6 @@ int main(int argc, char** argv)
 	float sqsum100 = ((100*101)/2)*((100*101)/2);
 	float sumsq100 = (2*pow(100,3) + 3*pow(100,2) + 100)/6;
 	printf ("The Answer is %9.0f\n",sqsum100-sumsq100);
+	return 0;
 }
 
