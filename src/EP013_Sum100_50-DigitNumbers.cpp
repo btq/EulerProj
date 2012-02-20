@@ -12,16 +12,19 @@ int main(int argc, char** argv)
 	int n;
 	char nums[100][51]; // the text file way
 	ifstream in;
-	in.open("EP013.txt");
+	in.open("./src/EP013.txt");
+	//in.getline(nums[1],51);
+	//cout << nums[1] << endl;
 	for (n=0; n<=99; n++)
 	{
-		while (in.good())     // loop while extraction from file is possible
-		{
-			in.getline(nums[n],51);       // get character from file
-			if (in.good())
-				cout << nums << endl;
-		}
-		in.close();
+		//while (in.good())     // loop while extraction from file is possible
+		//{
+			in.get(nums[n],51);       // get character from file
+		//	if (in.good())
+		//		cout << nums[n] << endl;
+		//}
+		cout << n << endl;
+		cout << nums[n] << endl;
 		/*int i, prod, maxprod=0;
 		for (i=0; i<=995; i++)
 		{
@@ -34,6 +37,8 @@ int main(int argc, char** argv)
 				maxprod = prod;
 		}*/
 	}
+	in.close();
+	//cout << nums
 	return 0;
 	//cout << "The answer is " << maxprod << endl;
 }
